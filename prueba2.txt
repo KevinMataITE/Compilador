@@ -1,0 +1,35 @@
+galleta main [
+int base
+int altura
+base = 10
+altura = 20
+
+imprimir("La altura es")
+imprimir(altura)
+
+imprimir("La base es")
+imprimir(base)
+
+
+camara (base == altura )[
+imprimir ("Los valores son iguales")
+]
+imprimir("Segunda fase")
+camara (altura > base  ) [
+imprimir("La base es menor que la altura  ")
+]esquina[
+imprimir("La altura es menor que la base ")
+]
+imprimir ("Tercera fase ")
+
+camara (base == altura )[
+imprimir (base * 10)
+] esquina camara ((base > altura) && (base !=0))[
+imprimir (base)
+]esquina [
+imprimir ("no se cumple ninguna condicion")
+]
+imprimir("Fin del programa")
+
+
+]

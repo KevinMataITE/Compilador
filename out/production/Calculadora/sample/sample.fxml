@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="799.0" prefWidth="840.0" styleClass="background" stylesheets="@estilos.css" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="755.0" prefWidth="840.0" styleClass="background" stylesheets="@estilos.css" GridPane.columnIndex="1">
+         <children>
+            <MenuBar layoutX="-9.0" layoutY="-20.0" prefHeight="40.0" prefWidth="843.0" stylesheets="@estilos.css">
+              <menus>
+                <Menu mnemonicParsing="false" text="Archivo">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#archivo" text="Abrir" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#borrar" text="Delete" />
+                        <MenuItem mnemonicParsing="false" onAction="#traductor" text="Traducir" />
+                        <MenuItem mnemonicParsing="false" onAction="#traductorc" text="Traducir C " />
+                  </items>
+                </Menu>
+              </menus>
+               <effect>
+                  <InnerShadow>
+                     <color>
+                        <Color opacity="0.604347825050354" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </MenuBar>
+            <Button fx:id="btnchido" layoutX="346.0" layoutY="409.0" mnemonicParsing="false" onAction="#pressbutton" prefHeight="35.0" prefWidth="142.0" text="Compilar" />
+
+            <TextArea fx:id="textareachido" layoutX="78.0" layoutY="68.0" prefHeight="313.0" prefWidth="668.0" stylesheets="@estilos.css">
+               <effect>
+                  <InnerShadow choke="0.17" height="22.49" radius="11.114999999999998" width="23.97">
+                     <color>
+                        <Color red="0.800000011920929" green="0.24799999594688416" blue="0.30320000648498535" />
+                     </color>
+                  </InnerShadow>
+               </effect></TextArea>
+            <TextArea fx:id="areasalida" layoutX="83.0" layoutY="473.0" prefHeight="282.0" prefWidth="668.0">
+               <effect>
+                  <InnerShadow choke="0.52" height="22.49" radius="11.114999999999998" width="23.97">
+                     <color>
+                        <Color red="0.800000011920929" green="0.24799999594688416" blue="0.30320000648498535" opacity="0.760869562625885" />
+                     </color>
+                  </InnerShadow>
+               </effect></TextArea>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

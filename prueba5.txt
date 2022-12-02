@@ -1,0 +1,14 @@
+#include <stdio.h>
+void main(){
+    printf("Indica el numero de saludos que quieres hacer");
+
+    int saludos;
+    saludos = 10;
+
+    while ( saludos != 0 ){
+        printf( saludos );
+        saludos = saludos - 1;
+    }
+
+    printf( "Fin del programa" );
+}

@@ -1,0 +1,32 @@
+galleta main (){
+
+imprimir ("Ejecutando la fase del Analizador Semantico");
+camara (1){
+imprimir("Estamos empezando");
+}
+
+int pasaporte;
+int visa;
+int dinero;
+
+pasaporte=1;
+visa=0;
+dinero=1;
+
+camara ((pasaporte) && (visa)){
+imprimir("Puedo viajar a paises que pidan visa");
+camara(dinero){
+imprimir("Buen trabajo a viajar");
+}esquina {
+imprimir("Hay que seguir ahorrando para poder viajar");
+} esquina {
+    imrpimir ("ghola);
+}
+} esquina camara ((pasaporte) || (dinero)){
+imprimir("Puedes visitar varios paises pero no USA");
+}esquina {
+imprimir ("La vida es cruel");
+}
+
+imprimir("Finalizamos el viaje");
+}

@@ -1,0 +1,93 @@
+#include <stdio.h>
+
+void main(){
+    /**
+     * En este programa se analizara que las variables tengan
+     * el alcance para el cual están diseñadas
+     **/
+
+    float estatura = 1.75;
+    float peso = 71.0;
+
+    float imc;
+
+    imc = peso / (estatura * estatura);
+
+    if ( (imc >= 18.5) && (imc <= 24.9) ){
+        int salir;
+        salir = 0;
+        while(salir != 4){
+            printf("Estas en un peso saludable");
+            salir = salir + 1;
+            if(salir != 4 ){
+                printf("sigue alimentandote bien");
+            }
+        }
+    } else if( (imc >= 25) && (imc <= 29.9) ){
+        printf("Tienes sobrepeso");
+    } else if( imc > 29.9 ){
+        printf("Eres una persona obesa");
+    } else {
+        printf("Eres una persona con desnutricion");
+    }
+
+    /**
+     * Calculo para determinar la cantidad de calorias debera consumir una persona
+     * que esta con su IMC saludable
+     **/
+    if ( (imc >= 18.5) && (imc <= 24.9) ) {
+        /**
+         * seleccionar genero de la persona
+         *  0 = male, 1 = femmale
+         * **/
+        int gender = 1;
+
+        /**
+         * Se necesitaran los datos como:
+         * edad (años),
+         * peso (kg),
+         * altura (m)
+         * **/
+        float edad = 39.0;
+        float peso = 71.0;
+        float estatura = 1.75;
+
+        /**
+         * Se necesita conocer el nivel de actividad de la persona (AF)
+         *  AF = 1 (sedentario)
+            AF = 1,12 (poco activo)
+            AF = 1,27 (activo)
+            AF = 1,45 (muy activo)
+         * **/
+        float AF = 1.27;
+
+        /**
+         * Necesidades energéticas NEE
+         * **/
+        float NEE;
+        if ( gender == 1 ){
+            /**
+             * Calculo cuando es genero femenino
+             * **/
+            NEE = 354.0 - 6.91 * edad + AF * (9.36 * peso + 726 * altura);
+        } else {
+            /**
+             * Calculo cuando es genero femenino
+             * **/
+            NEE = 662 - 9.53 * edad + AF * ( 15.91 * peso + 539.6 * altura);
+        }
+
+        printf("La cantida de calorias que deberas consumir son:");
+        printf(NEE);
+    }
+
+
+
+
+
+    printf(salir);
+    printf("Fin del programa");
+
+
+
+}
